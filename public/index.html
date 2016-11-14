@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="spotify">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<!--This is the public index.hmtl
+	{{4+4}}-->
+	<!--<home></home>-->
+    <ui-view></ui-view>
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+ 
+
+	<script src="music/init.js"></script>
+	<script src="music/app/config/routes.js"></script>
+	<script src="music/angular-spotify.js"></script>
+    <script src="music/app/components/home/home-controller.js"></script>
+	<script src="music/app/components/tracks/tracks-controller.js"></script>
+
+</body>
+
+</html>
