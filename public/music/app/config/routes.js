@@ -7,14 +7,20 @@ angular.module('spotify')
             .state({
                 name: 'home',
                 url: '/home',
-                template: '<home></home>' //Get the right component here and go look at your page
+                template: '<home></home>' 
             })
 
             .state({
                 name: 'tracks',
-                // url: '/home/:albumId',
-                url: '/home/tracks',
+                url: '/home/:albumId',
+                // url: '/home/tracks',
                 template: '<tracks></tracks>'         
+            })
+              .state({
+                name: 'login',
+                // url: '/home/:albumId',
+                url: '/login',
+                template: '<login></login>'         
             })
 
 

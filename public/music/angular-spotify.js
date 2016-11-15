@@ -100,6 +100,7 @@
           },
 
           _auth: function (isJson) {
+            debugger
             var auth = {
               'Authorization': 'Bearer ' + this.authToken
             };
@@ -496,6 +497,7 @@
           login: function () {
             var deferred = $q.defer();
             var that = this;
+          
 
             var w = 400,
                 h = 500,
