@@ -8,16 +8,28 @@ angular.module('spotify')
 
 function TracksController($stateParams, Spotify){
     var tc = this
-    var albumId = $stateParams.albumId
+    // var albumId = $stateParams.albumId
 
-tc.search = function(query){
-    debugger
+tc.getAlbum = function(albumId){
 
-Spotify.search(query,'album').then(function(data){
-   tc.albums = data
-console.log(data)
-})
+Spotify.getAlbum(albumId).then(function (data) {
+  tc.album = data
+  console.log(tc.album);
+});
+}  
+
+tc.getTracks = function(albumId){
+
+
+Spotify.getAlbumTracks(albumId).then(function (data) {
+    tc.tracks = data
+  console.log(tc.tracks);
+});
 }
+
+tc.getAlbum('2UJwKSBUz6rtW4QLK74kQu')
+
+tc.getTracks('2UJwKSBUz6rtW4QLK74kQu')
 
 }
 

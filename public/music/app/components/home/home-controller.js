@@ -28,7 +28,6 @@ function HomeController(Spotify){
 // });
 
 hc.search = function(query){
-    debugger
 
 Spotify.search(query,'album').then(function(data){
     hc.albums = data

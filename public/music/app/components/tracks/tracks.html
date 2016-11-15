@@ -1,1 +1,23 @@
-{{5+5}}
+<div class="album-details">
+	<div class="jumbotron">
+
+
+    <img src="{{$ctrl.album.images[0].url}}" alt="">
+       <h3>{{$ctrl.album.name}}</h3> 
+        <h3>{{$ctrl.album.artists[0].name}}</h3> 
+       <!--without ng-repeat -->
+
+	
+			<!--<h3>{{$ctrl.tracks.items[0].name}}</h3>-->
+		
+		<ul>
+
+		<li ng-repeat="track in $ctrl.tracks.items"> 
+			<h6>{{track.name}}</h6>
+			<!--<audio src="{{track.previewUrl}}" controls></audio>-->
+			
+			</li>
+		</ul>
+
+</div>
+</div>
