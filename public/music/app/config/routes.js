@@ -7,12 +7,13 @@ angular.module('spotify')
             .state({
                 name: 'home',
                 url: '/home',
+                // url: '/home/?:artistId',
                 template: '<home></home>' 
             })
 
             .state({
                 name: 'tracks',
-                url: '/home/:albumId',
+                url: '/home/:albumId/:artistId',
                 // url: '/home/tracks',
                 template: '<tracks></tracks>'         
             })

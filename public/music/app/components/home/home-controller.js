@@ -25,6 +25,7 @@ function HomeController(Spotify) {
 
     // Spotify.getArtist('0LcJLqbBmaGUft1e9Mm8HV').then(function (data) {
     //   console.log(data);
+    //   hc.albums = data;
     // });
 
     hc.search = function (query) {
