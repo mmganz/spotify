@@ -1,11 +1,12 @@
 
 
 <div class="container-fluid">
-<form ng-submit="$ctrl.search($ctrl.query)">
+<form ng-click="$ctrl.search($ctrl.query)">
         <input type="text" ng-model="$ctrl.query">
+         <a ui-sref="artist({{artistId: $ctrl.albums.albums.items[0].artists[0].id}})" class="btn btn-primary" role="button">Search</a>
     </form>
 
-    <div class="row">
+    <!--<div class="row">
         <div class="col-sm-4" ng-repeat="album in $ctrl.albums.albums.items">
             <div class="thumbnail">
                 <img ng-src="{{album.images[0].url}}" alt="">
@@ -19,4 +20,4 @@
             </div>
         </div>
     </div>
-</div> 
+</div> -->

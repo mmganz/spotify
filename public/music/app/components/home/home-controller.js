@@ -31,8 +31,11 @@ function HomeController(Spotify) {
     hc.search = function (query) {
 
         Spotify.search(query, 'album').then(function (data) {
+            debugger
             hc.albums = data
             console.log(data)
+    var artistId = hc.albums.albums.items[0].artists[0].id
+    console.log(artistId)
         })
     }
 

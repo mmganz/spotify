@@ -10,9 +10,9 @@ function TracksController($stateParams, Spotify) {
     var tc = this
     var albumId = $stateParams.albumId
     var artistId = $stateParams.artistId
+    
     // var artistId = tc.album.artists[0].id
     tc.getAlbum = function (albumId) {
-        debugger
 
         Spotify.getAlbum(albumId).then(function (data) {
             tc.album = data
@@ -35,7 +35,6 @@ function TracksController($stateParams, Spotify) {
     }
 
 tc.getRealted = function(artistId){
-    debugger
     Spotify.getRelatedArtists(artistId).then(function (data) {
         tc.related = data
         console.log(tc.related);

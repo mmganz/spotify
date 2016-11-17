@@ -7,23 +7,27 @@ angular.module('spotify')
             .state({
                 name: 'home',
                 url: '/home',
-                // url: '/home/?:artistId',
                 template: '<home></home>' 
             })
 
             .state({
                 name: 'tracks',
-                url: '/home/:albumId/:artistId',
-                // url: '/home/tracks',
+                url: '/home/:artistId/:albumId',
                 template: '<tracks></tracks>'         
             })
               .state({
                 name: 'login',
-                // url: '/home/:albumId',
                 url: '/login',
                 template: '<login></login>'         
             })
 
+            .state({
+                name: 'artist',
+                url: '/home/:artistId',
+                template: '<artist></artist>'
 
-            $urlRouterProvider.otherwise('/home')
+            })
+
+
+            // $urlRouterProvider.otherwise('/home')
                 })
