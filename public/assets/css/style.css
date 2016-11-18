@@ -3,8 +3,35 @@
 }
 img{
     display: block;
-    align-self: center
+    width: 100%;
 }
+h1{
+  color: #074e68
+}
+h1{
+  color: #074e68
+}
+
+h3{
+  color: #074e68
+}
+
+h2{
+color: #074e68 
+}
+
+.tracks-button{
+background-color: #074e68;
+color: white; 
+
+}
+
+.home-button{
+  background-color: #074e68;
+  color: white;
+}
+
+
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 html, body {
@@ -36,7 +63,7 @@ html, body {
     text-transform: uppercase;
     text-decoration: none; }
   .card .image {
-    position: relative; }
+    position: center; }
     .card .image .title {
       position: absolute;
       bottom: 0;

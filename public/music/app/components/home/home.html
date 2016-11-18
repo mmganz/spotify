@@ -18,11 +18,11 @@
 </div>
 
 <div class="row">
-    <div class="small-10 columns">
+    <div class="small-10 small-offset-1 columns">
        
 <form ng-click="$ctrl.search($ctrl.query)">
         <input type="text" ng-model="$ctrl.query">
-         <a ui-sref="artist({artist:$ctrl.query})" class="btn btn-primary text-center" role="button">Search</a>
+         <a ui-sref="artist({artist:$ctrl.query})" class="button home-button text-center" role="button">Search</a>
     </form>
 
     </div>
