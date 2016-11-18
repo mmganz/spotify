@@ -1,41 +1,82 @@
-<!--<div class="conatiner">
-	<div class="row">
-	<div class="col-sm-6">-->
+<div class="row">
+	<div class="columns small-10">
+		<h3 class="text-center">{{$ctrl.album.name}}</h3>
+		<!--<h3>{{$ctrl.album.artists[0].name}}</h3>-->
+	</div>
 
-<div class="album-details">
-	<div class="jumbotron">
+	<div class="columns small-2">
+		<a ui-sref="artist({artist:$ctrl.album.artists[0].name})" class="btn btn-primary" role="button">Back to {{$ctrl.album.artists[0].name}} </a>
+	</div>
 
-
-		<img src="{{$ctrl.album.images[0].url}}" alt="">
-		<h3>{{$ctrl.album.name}}</h3>
-		<h3>{{$ctrl.album.artists[0].name}}</h3>
-		<h3>Play Album</h3>
-		<!--without ng-repeat -->
-
- <a ui-sref="artist({artist:$ctrl.album.artists[0].name})" class="btn btn-primary" role="button">Back to {{$ctrl.album.artists[0].name}} </a>
-
-		<!--<h3>{{$ctrl.tracks.items[0].name}}</h3>-->
-
-		<ul>
-
-			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}"
-				frameborder="0" allowtransparency="true" width="300" height="380"></iframe>
+</div>
 
 
+
+
+
+<div class="row">
+	<div class="columns small-6">
+		<div class="album-details">
+
+			<img src="{{$ctrl.album.images[0].url}}" height="480" width="480" alt="">
+		</div>
+	</div>
+
+	<div class="columns small-6">
+		<div class="iframe">
+
+			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}" frameborder="0" allowtransparency="true" width="400" height="500"></iframe>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="row">
+	<div class="columns small-12">
+		<h3>Related Artists</h3>
+	</div>
+</div>
+
+<div class="row small-up-1 medium-up-6">
+	<div class="column" ng-repeat="artist in $ctrl.related.artists">
+		<div class="card">
+			<a ui-sref="artist({artist:$ctrl.query})" ng-click- "($ctrl.search($ctrl.query))">
+				<div class="content">
+					<h4 class="text-center">{{artist.name}}</h4>
+				</div>
+				<div class="image">
+					<img src="{{artist.images[0].url}}" alt="" height="100" width="100">
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<ul>
 			<li ng-repeat="track in $ctrl.tracks.items">
 				<h6>{{track.name}}</h6>
 			</li>
-		</ul>
+		</ul>-->
 
-	</div>
-<!--</div>-->
-<!--</div>-->
 
-<!--<div class="col-sm-6">-->
 
-<h3>Related Artists</h3>
-<!--<div class="row">
-<div class="col-sm-6">-->
+
+<!--<h3>Related Artists</h3>
+
 	<ul>	
 	<li ng-repeat="artist in $ctrl.related.artists">
 	<h4>{{artist.name}}</h4>
@@ -43,22 +84,4 @@
 		</li>	
 		
 		</ul> 
-	<!--<h4>{{$ctrl.related.artists[0].name}}</h4>-->
-
-<!--<div class="col-sm-6" ng-repeat"artist in $ctrl.related.artists">-->
-<!--</div>
-
-
-</div>-->
-
-
-<!--</div>
-
-
-
-
-
-
-</div>
-</div>-->
-</div>
+-->

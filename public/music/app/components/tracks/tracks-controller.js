@@ -39,8 +39,16 @@ tc.getRealted = function(artistId){
     Spotify.getRelatedArtists(artistId).then(function (data) {
         tc.related = data
         console.log(tc.related);
+        tc.query = tc.related.artists[0].name
 });
 }
+
+tc.search = function(query){
+        Spotify.search(tc.query, 'album').then(function (data) {
+            console.log(data)
+    })
+}
+
 
     tc.getAlbum(albumId)
 

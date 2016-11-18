@@ -1,23 +1,32 @@
+<div class="row">
+<div class="small-12 columns">
+    <h1 class="text-center">Welcome to Meredith's Spotify App</h1>
+</div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+         <img src="/assets/images/Spotify_Logo_RGB_Green.png" alt="">
+    </div>
+</div>
 
 
+<div class="row">
+    <div class="small-12 columns">
+        <h2 class="text-center">Search for an Artist</h2>
+    </div>
+</div>
 
+<div class="row">
+    <div class="small-10 columns">
+       
 <form ng-click="$ctrl.search($ctrl.query)">
         <input type="text" ng-model="$ctrl.query">
-         <a ui-sref="artist({artist:$ctrl.query})" class="btn btn-primary" role="button">Search</a>
+         <a ui-sref="artist({artist:$ctrl.query})" class="btn btn-primary text-center" role="button">Search</a>
     </form>
 
-    <!--<div class="row">
-        <div class="col-sm-4" ng-repeat="album in $ctrl.albums.albums.items">
-            <div class="thumbnail">
-                <img ng-src="{{album.images[0].url}}" alt="">
-                <div class="caption">
-                    <h3>{{album.name}}</h3>
-                    <h3>{{album.artists[0].name}}</h3>
-                    <a ui-sref="tracks({albumId: album.id, artistId: album.artists[0].id})" class="btn btn-primary" role="button">More Dets</a>
-                    <p>   
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
-</div> -->
+</div>
+
+
+

@@ -1,16 +1,28 @@
-    <div class="container-fluid">
-        <h2>{{$ctrl.artist.name}}</h2>
-        <a ui-sref="home" class="btn btn-primary" role="button">Back to Home</a>
-        <div class="col-sm-4" ng-repeat="album in $ctrl.albums.items">
-            <div class="thumbnail">
-                <img ng-src="{{album.images[0].url}}" alt="">
-                <div class="caption">
-                    <h3>{{album.name}}</h3>
-                    <h3>{{album.artists[0].name}}</h3>
-                    <a ui-sref="tracks({artistId: album.artists[0].id, albumId: album.id})" class="btn btn-primary" role="button">More Dets</a>
-                </div>
+<!--top row-->
+<div class="row">
+    <div class="columns small-10">
+        <h2 class="text-center">{{$ctrl.artist.name}}</h2>
+    </div>
+    <div class="columns small-2">
+        <a ui-sref="home" class="secondary button small" role="button">Back to Home</a>
+    </div>
+</div>
+
+<!--albums-->
+<div class="row small-up-1 medium-up-4">
+    <div class="column" ng-repeat="album in $ctrl.albums.items">
+        <div class="card">
+            <div class="image">
+                <a ui-sref="tracks({artistId: album.artists[0].id, albumId: album.id})" class="btn btn-primary" role="button">
+                    <img ng-src="{{album.images[0].url}}" height="250" width="250" alt="">
+                    </a>
+            </div>
+            <div class="content">
+                <h3 class="text-center">{{album.name}}</h3>
+                <!--<h3>{{album.artists[0].name}}</h3>-->
+                <!--<a ui-sref="tracks({artistId: album.artists[0].id, albumId: album.id})" class="btn btn-primary" role="button">More Dets</a>-->
             </div>
         </div>
+        <!--</a>-->
     </div>
-
-
+</div>
