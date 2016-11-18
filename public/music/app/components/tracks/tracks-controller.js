@@ -31,7 +31,8 @@ function TracksController($stateParams, Spotify) {
             tc.tracks = data
             console.log(tc.tracks);
             var trackIds = tc.tracks.items.map(function (track) { return track.id }).join(',')
-            tc.trackIds = 'https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:'+trackIds
+            tc.trackIds = 'https://embed.spotify.com/?uri=spotify:trackset:%20:'+trackIds+'&theme=white'
+
             // console.log(tc.trackIds)
         });
     }

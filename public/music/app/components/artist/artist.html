@@ -8,6 +8,33 @@
     </div>
 </div>
 
+
+<!--top tracks-->
+
+<div class="row">
+	<div class="columns small-6">
+
+         <img class="artist-img" ng-src="{{$ctrl.artist.images[0].url}}" height="300" width="300" alt="{{$ctrl.artist.name}}">
+
+		</div>
+        <div class="columns small-6">
+
+        <h2 class="text-center">Top Tracks</h2>
+
+        <div class="iframe">
+			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}" frameborder="0" allowtransparency="true" width="300" height="380" theme="white"></iframe>
+			</div>
+
+        </div>
+        </div>
+
+
+<div class="row">
+    <div class="columns-12 small">
+        <h2 class="text-center">Albums</h2>
+    </div>
+</div>
+	
 <!--albums-->
 <div class="row small-up-1 medium-up-4">
     <div class="column" ng-repeat="album in $ctrl.albums.items">
@@ -19,7 +46,7 @@
                 </a>
             </div>
             <div class="content">
-                <h3 class="text-center">{{album.name}}</h3>
+                <h4 class="text-center">{{album.name}}</h4>
                 <!--<h3>{{album.artists[0].name}}</h3>-->
             </div>
         </div>

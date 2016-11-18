@@ -10,12 +10,22 @@ function ArtistController($stateParams, Spotify) {
     var ac = this
     Spotify.search($stateParams.artist, 'album').then(function (data) {
         ac.albums = data
-        console.log(data)
+        // console.log(data)
         ac.artistId = ac.albums.albums.items[0].artists[0].id
-        console.log(ac.artistId)
+        // console.log(ac.artistId)
         ready()
     })
     //     var artistId = $stateParams.artistId
+
+ac.getTopTracks = function(artistId){
+    Spotify.getArtistTopTracks(artistId, 'US').then(function (data) {
+        ac.tracks = data
+        // console.log(data)
+        var trackIds = ac.tracks.tracks.map(function (track) { return track.id }).join(',')
+            ac.trackIds = 'https://embed.spotify.com/?uri=spotify:trackset:TOP%20TRACKS:'+trackIds+'&theme=white'
+    // console.log(data);
+  });
+}
 
 
     ac.getArtist = function(artistId){
@@ -28,8 +38,8 @@ function ArtistController($stateParams, Spotify) {
 
     ac.getAlbums = function(artistId){
     Spotify.getArtistAlbums(artistId).then(function (data) {
-          console.log('getAlbums');
-      console.log(data);
+    //       console.log('getAlbums');
+    //   console.log(data);
       ac.albums = data;
     });
 }
@@ -37,6 +47,7 @@ function ArtistController($stateParams, Spotify) {
 function ready(){
     ac.getArtist(ac.artistId)
     ac.getAlbums(ac.artistId)
+    ac.getTopTracks(ac.artistId)
 }
 
 
