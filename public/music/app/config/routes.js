@@ -23,7 +23,7 @@ angular.module('spotify')
 
             .state({
                 name: 'artist',
-                url: '/home/:artistId',
+                url: '/home/:artist',
                 template: '<artist></artist>'
 
             })

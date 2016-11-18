@@ -10,6 +10,7 @@ function TracksController($stateParams, Spotify) {
     var tc = this
     var albumId = $stateParams.albumId
     var artistId = $stateParams.artistId
+    tc.artistID = $stateParams.artistId
     
     // var artistId = tc.album.artists[0].id
     tc.getAlbum = function (albumId) {

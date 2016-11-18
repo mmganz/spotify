@@ -28,16 +28,15 @@ function HomeController(Spotify) {
     //   hc.albums = data;
     // });
 
-    hc.search = function (query) {
+    // hc.search = function (query) {
 
-        Spotify.search(query, 'album').then(function (data) {
-            debugger
-            hc.albums = data
-            console.log(data)
-    var artistId = hc.albums.albums.items[0].artists[0].id
-    console.log(artistId)
-        })
-    }
+    // //     Spotify.search(query, 'album').then(function (data) {
+    // //         hc.albums = data
+    // //         console.log(data)
+    // //  hc.artistId = hc.albums.albums.items[0].artists[0].id
+    // // console.log(artistId)
+    // //     })
+    // }
 
     // hc.search('1989');
 
