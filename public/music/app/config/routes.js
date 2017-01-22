@@ -28,6 +28,12 @@ angular.module('spotify')
 
             })
 
+            .state({
+                name: 'mypage',
+                url: '/mypage',
+                template: '<mypage></mypage>'
+            })
+
 
             // $urlRouterProvider.otherwise('/home')
                 })

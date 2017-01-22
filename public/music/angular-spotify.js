@@ -100,7 +100,6 @@
           },
 
           _auth: function (isJson) {
-            debugger
             var auth = {
               'Authorization': 'Bearer ' + this.authToken
             };
