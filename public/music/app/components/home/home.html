@@ -26,12 +26,14 @@
 
 <div class="row">
     <div class="small-10 small-offset-1 columns">
-       
-<form ng-click="$ctrl.search($ctrl.query)">
-        <input type="text" ng-model="$ctrl.query">
-         <a ui-sref="artist({artist:$ctrl.query})" class="button home-button text-center" role="button">Search</a>
-    </form>
 
+    <form ng-submit="$ctrl.search($ctrl.query)">
+        <input type="text" ng-model="$ctrl.query">
+        <button type="submit"  class="button home-button text-center" ui-sref="artist({artist:$ctrl.query})">
+        Search
+        </button>
+    </form>
+       
     </div>
 </div>
 
