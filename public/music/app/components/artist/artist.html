@@ -14,6 +14,8 @@
 <div class="row">
 	<div class="columns small-6">
 
+        <h2 class="tt">Top Tracks</h2>
+
          <img class="artist-img" ng-src="{{$ctrl.artist.images[0].url}}" height="300" width="300" alt="{{$ctrl.artist.name}}">
 
 		</div>
@@ -21,11 +23,11 @@
 
         <h2 class="text-center">Top Tracks</h2>
 
-        <div class="card">
+            
         <div class="iframe">
-			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}" frameborder="0" allowtransparency="true" width="300" height="380" theme="white"></iframe>
+			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}" frameborder="0" allowtransparency="true" width="500" height="380" theme="white"></iframe>
 			</div>
-            </div>
+           
         </div>
         </div>
 
