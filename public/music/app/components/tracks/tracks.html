@@ -1,9 +1,14 @@
 <div class="row">
-	<div class="columns small-2 small-offset-10">
+
+  <div class="columns small-10">
+        <h1 class="text-center">{{$ctrl.album.name}}</h1>
+    </div>
+
+	<div class="columns small-2">
 		<a ui-sref="artist({artist:$ctrl.album.artists[0].name})" class="button tracks-button" role="button">Back to {{$ctrl.album.artists[0].name}} </a>
 	</div>
-
 </div>
+
 
 
 
@@ -28,7 +33,7 @@
 
 <div class="row">
 	<div class="columns small-12">
-		<h3 class="text-center">Related Artists</h3>
+		<h1 class="text-center">Related Artists</h1>
 		<h6 class="text-center">**Click on artist image to navigate to artist**</h6>
 	</div>
 </div>
