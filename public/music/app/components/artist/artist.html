@@ -16,7 +16,7 @@
 
         <h2 class="tt">Top Tracks</h2>
 
-         <img class="artist-img" ng-src="{{$ctrl.artist.images[0].url}}" height="380" width="380" alt="{{$ctrl.artist.name}}">
+         <img class="artist-img" ng-src="{{$ctrl.artist.images[0].url}}" alt="{{$ctrl.artist.name}}">
 
 		</div>
         <div class="columns small-6">
@@ -42,16 +42,14 @@
 <!--albums-->
 <div class="row small-up-1 medium-up-4">
     <div class="column" ng-repeat="album in $ctrl.albums.items">
-        <!--<a ui-href="tracks({artistId: album.artists[0].id, albumId: album.id})">-->
         <div class="card">
             <div class="image">
                 <a ui-sref="tracks({artist: $ctrl.artist.name, albumId: album.id})" class="btn btn-primary" role="button">
-                    <img ng-src="{{album.images[0].url}}" height="250" width="250" alt="">
+                    <img ng-src="{{album.images[0].url}}" alt="">
                 </a>
             </div>
             <div class="content">
                 <h4 class="text-center">{{album.name}}</h4>
-                <!--<h3>{{album.artists[0].name}}</h3>-->
             </div>
         </div>
     </div>

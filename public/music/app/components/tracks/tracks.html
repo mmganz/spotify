@@ -18,12 +18,10 @@
 	</div>
 
 	<div class="columns small-6">
-		<div class="card">
 		<div class="iframe">
 
 			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}" frameborder="0" allowtransparency="true" width="500" height="380" theme="white"></iframe>
 		</div>
-	</div>
 	</div>
 	</div>
 
@@ -31,6 +29,7 @@
 <div class="row">
 	<div class="columns small-12">
 		<h3 class="text-center">Related Artists</h3>
+		<h6 class="text-center">**Click on artist image to navigate to artist**</h6>
 	</div>
 </div>
 
@@ -42,7 +41,7 @@
 					<h4 class="text-center">{{artist.name}}</h4>
 				</div>
 				<div class="image">
-					<img class="related-img" src="{{artist.images[0].url}}" alt="" height="100" width="100">
+					<img class="related-img" src="{{artist.images[0].url}}" alt="">
 				</div>
 			</a>
 		</div>
