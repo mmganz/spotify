@@ -1,9 +1,4 @@
 <div class="row">
-	<!--<div class="columns small-10">
-		<h3 class="text-center">{{$ctrl.album.name}}</h3>-->
-		<!--<h3>{{$ctrl.album.artists[0].name}}</h3>-->
-	<!--</div>-->
-
 	<div class="columns small-2 small-offset-10">
 		<a ui-sref="artist({artist:$ctrl.album.artists[0].name})" class="button tracks-button" role="button">Back to {{$ctrl.album.artists[0].name}} </a>
 	</div>
@@ -26,7 +21,7 @@
 		<div class="card">
 		<div class="iframe">
 
-			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}" frameborder="0" allowtransparency="true" width="400" height="500"></iframe>
+			<iframe ng-if="$ctrl.trackIds" ng-src="{{$ctrl.trackIds}}" frameborder="0" allowtransparency="true" width="500" height="380" theme="white"></iframe>
 		</div>
 	</div>
 	</div>
@@ -54,35 +49,3 @@
 	</div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<ul>
-			<li ng-repeat="track in $ctrl.tracks.items">
-				<h6>{{track.name}}</h6>
-			</li>
-		</ul>-->
-
-
-
-
-<!--<h3>Related Artists</h3>
-
-	<ul>	
-	<li ng-repeat="artist in $ctrl.related.artists">
-	<h4>{{artist.name}}</h4>
-	<img src="{{artist.images[0].url}}" alt="" height="100" width="100">
-		</li>	
-		
-		</ul> 
--->

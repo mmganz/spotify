@@ -1,6 +1,10 @@
+<img src="/assets/images/electronics.jpg" id="bi" alt="">
+
+
+<div class="text">
 <div class="row">
 <div class="small-12 columns">
-    <h1 class="text-center">Welcome to Meredith's Spotify App</h1>
+    <h1 class="text-center white">Welcome to Meredith's Spotify App</h1>
 </div>
 </div>
 
@@ -16,7 +20,8 @@
 
 <div class="row">
     <div class="small-12 columns">
-        <h2 class="text-center">Search for an Artist</h2>
+        <h2 class="text-center white">Browse Spotify Artists</h2>
+        <h6 class="text-center white">**Some artists may not be available per Spotify limitations**</h6>
     </div>
 </div>
 
@@ -25,13 +30,19 @@
 
     <form ng-submit="$ctrl.search($ctrl.query)">
         <input type="text" ng-model="$ctrl.query">
-        <button type="submit"  class="button home-button text-center" ui-sref="artist({artist:$ctrl.query})">
+        <div class="row">
+            <div class="small-12 small-offset-5 columns">
+        <button type="submit"  class="button large round home-button text-center" ui-sref="artist({artist:$ctrl.query})">
         Search
         </button>
+        </div>
+        </div>
     </form>
        
     </div>
 </div>
+</div>
+
 
 
 
